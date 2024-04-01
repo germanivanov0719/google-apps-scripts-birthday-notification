@@ -46,7 +46,7 @@ Emails are only sent when the script finds at least one event. This happens once
 
 Emails look like this ("Subject" and "Body" are not in the actual email):
 
-```
+```text
 Subject:
 Birthday notifications 🎂
 
@@ -66,7 +66,7 @@ Subject and content is slightly changed based on how many events are found.
 
 ### Can I modify, distribute, or sell this script?
 
-Yes, you can do anything with it, as it is available under MIT License. Please, respect others' privacy, and do not use modifications of this script to illegally collect someone's data.
+Yes, you can do anything with it, as the project is available under MIT License. Please, respect others' privacy, and do not use modifications of this script to illegally collect someone's data.
 
 ### How can I contribute?
 
@@ -95,7 +95,7 @@ Right now it only supports English. However, I am thinking about adding at least
    | Select type of time based trigger | Day timer |
    | Select time of day | 6am to 7am\* |
 
-   \*Choose any time period you prefer. Note, that the script will run within the selected time period, exact time is determined by Google.
+   \*Choose any time period you prefer. Note, that the script will run within the selected time period, but the exact time is determined by Google.
 
 9. Press _Save_
 10. Login to your account. When you see "Google hasn’t verified this app", click _Advanced > Go to `project name` (unsafe)_
