@@ -2,50 +2,78 @@
 
 My Google Apps Script for birthday notifications based on data from Google Contacts
 
-<!-- vscode-markdown-toc -->
+Table of Contents:
+
+<!-- TOC -->
 
 - [Google App Scripts Birthday Notifications](#google-app-scripts-birthday-notifications)
-  - [1. FAQ](#1-faq)
-    - [1.1. What does this script do?](#11-what-does-this-script-do)
-    - [1.2. Why do I need this?](#12-why-do-i-need-this)
-    - [1.3. Does it access my calendar events?](#13-does-it-access-my-calendar-events)
-    - [1.4. Is it free?](#14-is-it-free)
-    - [1.5. Can I modify, distribute, or sell this script?](#15-can-i-modify-distribute-or-sell-this-script)
-  - [2. How to set it up](#2-how-to-set-it-up)
+  - [FAQ](#faq)
+    - [What does this script do?](#what-does-this-script-do)
+    - [Why do I need this?](#why-do-i-need-this)
+    - [Does it access my calendar events?](#does-it-access-my-calendar-events)
+    - [Is it free?](#is-it-free)
+    - [When are the emails sent and how do they look like?](#when-are-the-emails-sent-and-how-do-they-look-like)
+    - [Can I modify, distribute, or sell this script?](#can-i-modify-distribute-or-sell-this-script)
+    - [How can I contribute?](#how-can-i-contribute)
+  - [How to set it up](#how-to-set-it-up)
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
+<!-- /TOC -->
 
-## 1. <a name='FAQ'></a>FAQ
+## FAQ
 
-### 1.1. <a name='Whatdoesthisscriptdo'></a>What does this script do?
+### What does this script do?
 
 It checks your Google Calendar events for any of your contacts' birthdays, anniversaries, and other important dates. If it finds something, an email is automatically sent to your email to remind you about this event.
 
-### 1.2. <a name='WhydoIneedthis'></a>Why do I need this?
+### Why do I need this?
 
 If you store contacts' birthdays, anniversaries, or other important dates in your Google Contacts, you can see those dates in Google Calendar and manually set up notifications for them in Google Contacts. However, if you have lots of contacts, you might find this process too time-consuming or notifications not reliable enough. If that's the case, you can use this script to check your calendar and send email notifications automatically.
 
-The script was created when Google removed birthday notifications from Google Calendar. Today, this functionality is back, but it still has some limitations.
+I've created this script when Google removed birthday notifications from Google Calendar. Today this functionality is back, but it still has some limitations.
 
-### 1.3. <a name='Doesitaccessmycalendarevents'></a>Does it access my calendar events?
+### Does it access my calendar events?
 
 While you do have to give it access to your Google Calendar, by default it only accesses calendar with the ID `addressbook#contacts@group.v.calendar.google.com`, which contains automatically generated events for your contacts. Other calendars are _never_ accessed, and no calendars are modified, unless you modify the original script.
 
-### 1.4. <a name='Isitfree'></a>Is it free?
+### Is it free?
 
 Yes, Google App Scripts is free for personal use with [some quotas](https://developers.google.com/apps-script/guides/services/quotas). The script only runs 2 operations every day (which takes about 1 sec), so it won't ever hit any of the limits. If you have (or plan to run) other scripts, it most likely won't make a difference either.
 
-### 1.5. <a name='CanImodifydistributeorsellthisscript'></a>Can I modify, distribute, or sell this script?
+### When are the emails sent and how do they look like?
+
+Emails are only sent when the script finds at least one event. This happens once every day, at the exact time that's set by you when adding this script to your Google App Scripts ([How to set it up](#2-how-to-set-it-up), step 8).
+
+Emails look like this ("Subject" and "Body" are not in the actual email):
+
+```
+Subject:
+Birthday notifications 🎂
+
+Body:
+3 birthdays today:
+- A's birthday
+- B's birthday
+- C's anniversary
+
+
+---
+To disable, go to https://script.google.com/home/triggers
+Sent automatically on Mon Apr 01 2024 05:37:24 GMT+0300 (Moscow Standard Time)
+```
+
+Subject and content is slightly changed based on how many events are found.
+
+### Can I modify, distribute, or sell this script?
 
 Yes, you can do anything with it, as it is available under MIL License. Please, respect others' privacy, and do not use modifications of this script to illegally collect someone's data.
 
-## 2. <a name='Howtosetitup'></a>How to set it up
+### How can I contribute?
 
-1. Go to https://script.google.com/
+However you like: fork the repository, create pull requests, open GitHub Issues, or request collaborator access from me. If you need to contact me, feel free to do so via [email](mailto:germanivanov0719@gmail.com).
+
+## How to set it up
+
+1. Go to https://script.google.com
 2. Create a new project
 3. Copy code from `Code.gs` to the code editor
 4. Change `YOUR EMAIL` in the first line to your email
