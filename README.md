@@ -12,9 +12,10 @@ Table of Contents:
     - [Why do I need this?](#why-do-i-need-this)
     - [Does it access my calendar events?](#does-it-access-my-calendar-events)
     - [Is it free?](#is-it-free)
-    - [When are the emails sent and how do they look like?](#when-are-the-emails-sent-and-how-do-they-look-like)
+    - [When are emails sent and how do they look like?](#when-are-emails-sent-and-how-do-they-look-like)
     - [Can I modify, distribute, or sell this script?](#can-i-modify-distribute-or-sell-this-script)
     - [How can I contribute?](#how-can-i-contribute)
+    - [Which languages does it support? Is it available in Russian?](#which-languages-does-it-support-is-it-available-in-russian)
   - [How to set it up](#how-to-set-it-up)
 
 <!-- /TOC -->
@@ -39,7 +40,7 @@ While you do have to give it access to your Google Calendar, by default it only 
 
 Yes, Google App Scripts is free for personal use with [some quotas](https://developers.google.com/apps-script/guides/services/quotas). The script only runs 2 operations every day (which takes about 1 sec), so it won't ever hit any of the limits. If you have (or plan to run) other scripts, it most likely won't make a difference either.
 
-### When are the emails sent and how do they look like?
+### When are emails sent and how do they look like?
 
 Emails are only sent when the script finds at least one event. This happens once every day, at the exact time that's set by you when adding this script to your Google App Scripts ([How to set it up](#2-how-to-set-it-up), step 8).
 
@@ -71,6 +72,10 @@ Yes, you can do anything with it, as it is available under MIL License. Please, 
 
 However you like: fork the repository, create pull requests, open GitHub Issues, or request collaborator access from me. If you need to contact me, feel free to do so via [email](mailto:germanivanov0719@gmail.com).
 
+### Which languages does it support? Is it available in Russian?
+
+Right now it only supports English. However, I am thinking about adding at least support for Russian language. If you need it, you can vote on the [issue #1](issues/1).
+
 ## How to set it up
 
 1. Go to https://script.google.com
@@ -82,17 +87,18 @@ However you like: fork the repository, create pull requests, open GitHub Issues,
 6. Save the file
 7. Go to _Triggers_ on the left side menu and add a trigger
 8. Change the following settings:
-   |Setting | Value|
-   |--|--|
-   |Choose which function to run | main|
-   | Choose which deployment should run | Head|
-   |Select event source| Time-driven|
-   |Select type of time based trigger|Day timer|
-   |Select time of day| 6am to 7am\*|
+   | Setting | Value |
+   | ---------------------------------- | ------------ |
+   | Choose which function to run | main |
+   | Choose which deployment should run | Head |
+   | Select event source | Time-driven |
+   | Select type of time based trigger | Day timer |
+   | Select time of day | 6am to 7am\* |
 
    \*Choose any time period you prefer. Note, that the script will run within the selected time period, exact time is determined by Google.
 
 9. Press _Save_
 10. Login to your account. When you see "Google hasn’t verified this app", click _Advanced > Go to `project name` (unsafe)_
 11. Click _Allow_
-12. Done!
+
+Done!
