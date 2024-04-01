@@ -66,7 +66,7 @@ Subject and content is slightly changed based on how many events are found.
 
 ### Can I modify, distribute, or sell this script?
 
-Yes, you can do anything with it, as it is available under MIL License. Please, respect others' privacy, and do not use modifications of this script to illegally collect someone's data.
+Yes, you can do anything with it, as it is available under MIT License. Please, respect others' privacy, and do not use modifications of this script to illegally collect someone's data.
 
 ### How can I contribute?
 
